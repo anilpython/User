@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Successfully Registered</title>
+</head>
+<body>
+<br>
+<div class="container">
+    {% if success %}
+<div class="alert alert-success">
+  <strong>{{ success }}</strong>
+</div>
+{% endif %}
+<a href="{% url 'web:log_in' %}"><button type="submit" class="btn btn-success">Login</button></a>
+</div>
+</body>
+</html>
+<link rel="stylesheet" href="/static/media/bootstrap3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/media/bootstrap3.3.7/css/bootstrap-theme.min.css">
+<script src="/static/media/bootstrap3.3.7/js/bootstrap.min.js">

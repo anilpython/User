@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ sign_up }}</title>
+</head>
+<body>
+<div class="container">
+    {% if success %}
+     <h2>{{ success }}<h2>
+    {% endif %}
+<h1>{{ signup }}</h1>
+<form method="POST" action="{% url 'web:register' %}">{% csrf_token %}
+ <div class="form-group">
+  <label for="usr">First Name:</label>
+  <input type="text" class="form-control" id="usr" name="first_name">
+</div>
+   <div class="form-group">
+  <label for="usr">Middle Name:</label>
+  <input type="text" class="form-control" id="usr" name="middle_name">
+</div>
+    <div class="form-group">
+  <label for="usr">Last Name:</label>
+  <input type="text" class="form-control" id="usr" name="last_name">
+</div>
+    <div class="form-group">
+  <label for="usr">User Name:</label>
+  <input type="text" class="form-control" id="usr" name="username">
+</div>
+    <div class="form-group">
+  <label for="usr">Email:</label>
+  <input type="text" class="form-control" id="usr" name="email">
+</div>
+<div class="form-group">
+  <label for="pwd">Password:</label>
+  <input type="password" class="form-control" id="pwd" name="password">
+</div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+    <a href="{% url 'web:index' %}"><button type="button" class="btn btn-success">Home Page</button></a>
+
+    </form>
+    </div>
+</body>
+</html>
+<link rel="stylesheet" href="/static/media/bootstrap3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/media/bootstrap3.3.7/css/bootstrap-theme.min.css">
+<script src="/static/media/bootstrap3.3.7/js/bootstrap.min.js">

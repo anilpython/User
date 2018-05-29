@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ login }}</title>
+</head>
+<body>
+<div class="container">
+<h1>{{ login }}</h1>
+<form>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input id="email" type="text" class="form-control" name="User Name" placeholder="Email">
+  </div><br>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+  </div><br>
+    <button type="submit" class="btn btn-success">Login</button>
+    <a href="{% url 'web:index' %}"><button type="button" class="btn btn-primary">Home Page</button></a>
+</form>
+    </div>
+</body>
+</html>
+<link rel="stylesheet" href="/static/media/bootstrap3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/media/bootstrap3.3.7/css/bootstrap-theme.min.css">
+<script src="/static/media/bootstrap3.3.7/js/bootstrap.min.js">
