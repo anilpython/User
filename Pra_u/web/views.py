@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 from django.shortcuts import render
 from .models import *
+from django.contrib.auth import authenticate
 
 def index(request):
     return render(request,"index.html",{})
@@ -19,4 +20,5 @@ def sign_up(request):
 
 
 def log_in(request):
-    return render(request,"login.html",{'login':"You Can login Here"})
+    user = authenticate(username=request.POST['username'],password=request.POST['password'])
+    return render(request,"login.html",{'user_id':user})
